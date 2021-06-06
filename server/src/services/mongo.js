@@ -1,6 +1,8 @@
+require('dotenv').config()
 const mongoose=require('mongoose')
 
-const mongoURL='mongodb+srv://b805rohit:Rr%40786786@bunnyapp.yza1w.mongodb.net/nasa?authSource=admin&replicaSet=BunnyApp-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true'
+//Enter your MongoUrl
+const mongoURL=process.env.DATABASE_URL
 
 mongoose.connection.once('open',()=>{
     console.log('MongoDB Connection Ready.')
