@@ -1,0 +1,22 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "Full Stack App",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "npm run server | npm run client",
+    "start-server": "npm run start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+    "client-install": "npm run install --prefix client",
+    "server-install": "npm run install --prefix server",
+    "install": "npm run client-install && npm run server-install",
+    "test": "npm test --prefix server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
